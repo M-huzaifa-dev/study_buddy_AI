@@ -28,17 +28,17 @@ Generate: Click the 'Generate' button.
 
 Results: Your AI-processed, structured study guide will load automatically in the sections below.
 
-## ⚙️ Development Setup
+# ⚙️ Development Setup
 1. Frontend
 Bash
-# Clone the repository
+## Clone the repository
 git clone <your-repo-url>
 
-# Install dependencies
+## Install dependencies
 npm install
 
-# Set your n8n Webhook URL in services/api.ts
-# Run the development server
+## Set your n8n Webhook URL in services/api.ts
+## Run the development server
 npm run dev
 2. n8n Backend Configuration
 Import the provided workflow JSON into your n8n instance.
@@ -51,7 +51,7 @@ Response Node: Ensure the "Response Body" is set to All Incoming Items for a sea
 
 Activate: Ensure the workflow is set to 'Active' to handle requests.
 
-## 💡 Troubleshooting
+# 💡 Troubleshooting
 "Service Unavailable": This usually indicates high demand on the AI model. Please wait a few seconds and try again.
 
 Data Not Loading: Verify that your n8n Webhook URL is correctly updated in the frontend and the workflow is active.
