@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Navigation } from './component/navigation';
-import { InputForm } from './component/input_form';
-import { ResultsDisplay } from './component/result_display';
-import { executeAutomationPipeline, WorkflowResponse, WorkflowPayload } from './services/api';
+import { Navigation } from './navigation';
+import { InputForm } from './input_form';
+import { ResultsDisplay } from './result_display';
+import { executeAutomationPipeline, WorkflowResponse, WorkflowPayload } from './api';
 
 export const App: React.FC = () => {
   const [pipelineData, setPipelineData] = useState<WorkflowResponse | null>(null);
