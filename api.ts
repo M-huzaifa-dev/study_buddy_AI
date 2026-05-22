@@ -12,7 +12,7 @@ export interface WorkflowResponse {
   viva_questions: string;
 }
 
-const N8N_WEBHOOK_ENDPOINT = "https://techdev786.app.n8n.cloud/webhook-test/study-buddy-pipeline";
+const VITE_N8N_WEBHOOK_URL = "https://techdev786.app.n8n.cloud/webhook/study-buddy-pipeline";
 
 export const executeAutomationPipeline = async (payload: WorkflowPayload): Promise<WorkflowResponse> => {
   try {
@@ -28,7 +28,7 @@ export const executeAutomationPipeline = async (payload: WorkflowPayload): Promi
       formData.append('assignment', payload.assignment); 
     }
 
-    const response = await axios.post(N8N_WEBHOOK_ENDPOINT, formData, {
+    const response = await axios.post(VITE_N8N_WEBHOOK_URL, formData, {
       timeout: 0, 
       headers: {
         'Content-Type': 'multipart/form-data', 
