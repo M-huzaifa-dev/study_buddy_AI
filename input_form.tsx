@@ -40,7 +40,7 @@ export const InputForm: React.FC<InputFormProps> = ({ onExecute, isLoading }) =>
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-slate-300">Student Email</label>
+          <label className="block text-sm font-medium text-slate-300">Email</label>
           <div className="relative">
             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-500"><i className="fa-solid fa-envelope"></i></span>
             <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="student@example.com" className="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-blue-500 text-slate-200 transition-colors" disabled={isLoading} />
@@ -56,8 +56,8 @@ export const InputForm: React.FC<InputFormProps> = ({ onExecute, isLoading }) =>
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-slate-300">Paste Text Directly (Optional)</label>
-          <textarea rows={4} value={rawText} onChange={(e) => setRawText(e.target.value)} placeholder="If you don't have a PDF, paste text here..." className="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-blue-500 text-slate-200 transition-colors resize-none" disabled={isLoading || !!fileText}></textarea>
+          <label className="block text-sm font-medium text-slate-300">Paste Text Directly</label>
+          <textarea rows={4} value={rawText} onChange={(e) => setRawText(e.target.value)} placeholder="paste text here..." className="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-blue-500 text-slate-200 transition-colors resize-none" disabled={isLoading || !!fileText}></textarea>
         </div>
 
         <button type="submit" disabled={isLoading} className={`w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3.5 px-4 rounded-xl shadow-lg transition-all transform active:scale-[0.99] flex items-center justify-center space-x-2 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}>
